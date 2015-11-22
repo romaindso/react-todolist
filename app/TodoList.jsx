@@ -33,7 +33,7 @@ const TodoList = React.createClass({
 
   render(){
     return (
-      <div>
+      <div className="TodoList">
         <h1>Todo List</h1>
         <form ref="form" onSubmit={this.handleSubmit}>
           <input type="text" ref="inputTodo" />
