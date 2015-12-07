@@ -8,9 +8,9 @@ const Todo = React.createClass({
       <li
         className="Todo"
         style={{textDecoration: this.props.todo.completed ? 'line-through' : ''}}
-        onClick={this.props.handlerComplete}
       >
-        {this.props.todo.text} <input type="button" value="X" />
+        <span onClick={this.props.handlerComplete}>{this.props.todo.text}</span>
+        <input type="button" value="X" onClick={this.props.handlerDelete}/>
       </li>
     );
   }

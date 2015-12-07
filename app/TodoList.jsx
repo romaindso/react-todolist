@@ -31,6 +31,14 @@ const TodoList = React.createClass({
     });
   },
 
+  handleOnDelete(index){
+    var todos = this.state.todos;
+    todos.splice(index, 1);
+    this.setState({
+      todos
+    });
+  },
+
   render(){
     return (
       <div className="TodoList">
@@ -41,7 +49,14 @@ const TodoList = React.createClass({
         </form>
         <ul>
           {this.state.todos.map((todo, index) => {
-            return <Todo todo={todo} key={index} handlerComplete={this.handleOnComplete.bind(this, index)}/>;
+            return (
+              <Todo
+                todo={todo}
+                key={index}
+                handlerComplete={this.handleOnComplete.bind(this, index)}
+                handlerDelete={this.handleOnDelete.bind(this, index)}
+              />
+            );
           })}
         </ul>
         <Counter todos={this.state.todos} />
