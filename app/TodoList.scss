@@ -1,0 +1,45 @@
+body {
+  font-family: 'Open Sans Light',Arial,Helvetica,sans-serif;
+  background-color: #333333;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+}
+
+.TodoList {
+  display: flex;
+  flex-flow: column nowrap;
+  padding: 40px;
+  min-height: 200px;
+  width: 400px;
+  background-color: white;
+  border: 1px solid #ccc;
+
+  h1 {
+    font-weight: normal;
+  }
+
+  ul {
+    list-style: none;
+    padding: 0;
+  }
+
+  input[type="text"] {
+    width: 200px;
+    height: 20px;
+  }
+
+  button {
+    color: white;
+    width: 50px;
+    height: 26px;
+    border: 1px solid #4B034B;
+    background-color: purple;
+
+    &:hover,
+    &:active {
+      background-color: #5C035C;
+    }
+  }
+}

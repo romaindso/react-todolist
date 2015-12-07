@@ -1,4 +1,5 @@
 import React from 'react';
+import './Counter.scss';
 
 const Counter = React.createClass({
   render(){
@@ -6,7 +7,7 @@ const Counter = React.createClass({
       return todo.completed;
     });
     return(
-      <span>Counter : {completed.length} / {this.props.todos.length} </span>
+      <span className="Counter">Counter : {completed.length} / {this.props.todos.length} </span>
     )
   }
 });

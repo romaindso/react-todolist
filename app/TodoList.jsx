@@ -1,6 +1,7 @@
 import React from 'react';
 import Todo from './Todo.jsx';
 import Counter from './Counter.jsx';
+import './TodoList.scss';
 
 const TodoList = React.createClass({
 
@@ -45,7 +46,7 @@ const TodoList = React.createClass({
         <h1>Todo List</h1>
         <form ref="form" onSubmit={this.handleSubmit}>
           <input type="text" ref="inputTodo" />
-          <input type="button" value="Add" onClick={this.handleSubmit} />
+          <button onClick={this.handleSubmit}>Add</button>
         </form>
         <ul>
           {this.state.todos.map((todo, index) => {
